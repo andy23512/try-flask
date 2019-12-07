@@ -5,8 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Nanoha</title>
+  <script src="static/vendor/jquery-3.4.1.min.js"></script>
 </head>
 <body>
   Nanoha
+  <script>
+    setTimeout(function(){
+      $.get('static/nanoha.txt', function(data) {
+        $('<span/>').appendTo('body').text('Received data: ' + data);
+      })
+    }, 1000)
+  </script>
 </body>
 </html>
